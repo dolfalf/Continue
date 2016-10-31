@@ -1,0 +1,6 @@
+framework module Pods_ContinueUITests {
+  umbrella header "Pods-ContinueUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
