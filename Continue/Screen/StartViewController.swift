@@ -17,7 +17,7 @@ class StartViewController: UIViewController {
         let dispatchTime: DispatchTime = DispatchTime.now() + Double(Int64(0.1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: dispatchTime, execute: {
             // your function here
-            self.tabBarController?.selectedIndex = 2;
+            self.tabBarController?.selectedIndex = 1;
         })
         
     }
