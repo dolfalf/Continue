@@ -6,7 +6,7 @@ target 'Continue' do
   use_frameworks!
 
   # Pods for Continue
-  pod 'KDIntroView', :git => 'https://github.com/likedan/KDIntroView'
+  pod 'Firebase/Core'
 
 
   target 'ContinueTests' do

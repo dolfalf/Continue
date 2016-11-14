@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2EAF412EC76BAB3A42A06DDE /* Pods_Continue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F24F80DEF09F77E1705D2A3 /* Pods_Continue.framework */; };
 		BB4107AA1DC348E900CFD858 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4107A91DC348E900CFD858 /* HomeTableViewCell.swift */; };
+		BB56D4EC1DD5800400574003 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB56D4EB1DD5800400574003 /* GoogleService-Info.plist */; };
+		BB56D4EF1DD5861200574003 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB56D4EE1DD5861200574003 /* Habit.swift */; };
 		BB5A2BDA1DD1BF8C00B8B39D /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5A2BD91DD1BF8C00B8B39D /* HabitView.swift */; };
 		BB5A2BDC1DD1BFFA00B8B39D /* CreateHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5A2BDB1DD1BFFA00B8B39D /* CreateHabitView.swift */; };
 		BB5A2BDE1DD1C05700B8B39D /* CheckHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5A2BDD1DD1C05700B8B39D /* CheckHabitView.swift */; };
@@ -55,6 +57,8 @@
 		702675E6BF97C3FCE75F2A54 /* Pods-ContinueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContinueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContinueTests/Pods-ContinueTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A813905F052CA44DE9191F01 /* Pods-ContinueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContinueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContinueTests/Pods-ContinueTests.release.xcconfig"; sourceTree = "<group>"; };
 		BB4107A91DC348E900CFD858 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewCell.swift; path = Parts/HomeTableViewCell.swift; sourceTree = "<group>"; };
+		BB56D4EB1DD5800400574003 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BB56D4EE1DD5861200574003 /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		BB5A2BD91DD1BF8C00B8B39D /* HabitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
 		BB5A2BDB1DD1BFFA00B8B39D /* CreateHabitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateHabitView.swift; sourceTree = "<group>"; };
 		BB5A2BDD1DD1C05700B8B39D /* CheckHabitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckHabitView.swift; sourceTree = "<group>"; };
@@ -139,6 +143,14 @@
 			name = Parts;
 			sourceTree = "<group>";
 		};
+		BB56D4ED1DD585A400574003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB56D4EE1DD5861200574003 /* Habit.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BB5A2BD81DD1A60600B8B39D /* ISW */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,11 +190,13 @@
 				BB6D19021DBF1546006934C0 /* AppDelegate.swift */,
 				BB6D19331DBF1B0E006934C0 /* Common */,
 				BB6D19321DBF1AFF006934C0 /* Screen */,
+				BB56D4ED1DD585A400574003 /* Models */,
 				BB6D190B1DBF1546006934C0 /* Assets.xcassets */,
 				BB6D190D1DBF1546006934C0 /* LaunchScreen.storyboard */,
 				BB6D19101DBF1546006934C0 /* Info.plist */,
 				BB9B32331DBF4B4E006CBFE4 /* LICENSE */,
 				BB9B32341DBF4B4E006CBFE4 /* README.md */,
+				BB56D4EB1DD5800400574003 /* GoogleService-Info.plist */,
 			);
 			path = Continue;
 			sourceTree = "<group>";
@@ -345,6 +359,7 @@
 			files = (
 				BB6D190F1DBF1546006934C0 /* LaunchScreen.storyboard in Resources */,
 				BB5A2BE21DD1D3D700B8B39D /* HabitView.xib in Resources */,
+				BB56D4EC1DD5800400574003 /* GoogleService-Info.plist in Resources */,
 				BB6D190C1DBF1546006934C0 /* Assets.xcassets in Resources */,
 				BB6D193B1DBF1C1C006934C0 /* Main.storyboard in Resources */,
 			);
@@ -500,6 +515,7 @@
 				BB4107AA1DC348E900CFD858 /* HomeTableViewCell.swift in Sources */,
 				BB6D19391DBF1BC2006934C0 /* HomeViewController.swift in Sources */,
 				BB5A2BDA1DD1BF8C00B8B39D /* HabitView.swift in Sources */,
+				BB56D4EF1DD5861200574003 /* Habit.swift in Sources */,
 				BB6D193D1DBF24F1006934C0 /* StartViewController.swift in Sources */,
 				BB6D19031DBF1546006934C0 /* AppDelegate.swift in Sources */,
 				BB5A2BDC1DD1BFFA00B8B39D /* CreateHabitView.swift in Sources */,

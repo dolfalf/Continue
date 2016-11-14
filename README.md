@@ -55,6 +55,27 @@ first swift project.
 코어데이터 보다는 Firebase를 이용해서 만들생각.
 공부겸해서..
 
+#### 테이블구조   
+
+Tablename: *Habit*
+
+|항목명             | 타입     | 설명                          |
+|:-----------------|:-------:|:----------------------------|
+| habitNo          | Double  | 습관훈련번호 auto increse       |
+| title            | String  | 습관명칭                       |
+| detail           | String  | 구체적인 습관행동                |
+| startDate        | UInt64  | 습관훈련시작날짜                 |
+| lastDoingDate    | UInt64  | 마자막에 습관훈련한 날짜           |
+| dayCount         | UInt16  | 습관훈련 카운트                  |
+| targetDayCount   | UInt16  | 목표훈련 숫자 (66일로 고정)       |
+| token            | String  | 통지를 위한 토큰                 |
+| notifyFlag       | Bool    | 통지여부(true:통지, false:통지안함)|
+| do_weekFlag      | Bool    | 주말에도 훈련여부 (default: true) |
+| completeFlag     | Bool    | 습관훈련완료                     |
+| deleteFlag       | Bool    | 습관삭제                        |
+| timestamp        | UInt64  | 타임스템프                      |
+
+
 
 ## 습관만들기  
 자 이제부터 매일 10분씩 투자하여 좋은습관을 만들어보자. 습관을 형성하는데 평균66일의 시간이 소요된다고 한다. 좋은 습관을 형성하는데 66일은 그다지 길지않은 시간이다.
