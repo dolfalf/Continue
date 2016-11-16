@@ -6,7 +6,10 @@ target 'Continue' do
   use_frameworks!
 
   # Pods for Continue
+  pod 'Firebase'
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 
   target 'ContinueTests' do

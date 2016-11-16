@@ -31,6 +31,8 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        testControl()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +51,26 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     */
 
+    func testControl() {
+        
+        let test_button = UIBarButtonItem(title: "test",
+                                          style: UIBarButtonItemStyle.done,
+                                          target: self,
+                                          action: #selector(testButtonTouched(sender:)))
+        
+        self.navigationItem.rightBarButtonItems = [test_button]
+        
+        
+        
+        
+    }
+    
+    func testButtonTouched(sender: UIBarButtonItem) {
+        print(#function)
+        
+        performSegue(withIdentifier: "TestSegue", sender: self)
+    }
+    
     //REMARK : tableview delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MenuItem.Count.rawValue
