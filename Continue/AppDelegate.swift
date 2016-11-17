@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FIRApp.configure()
+        
+        //서비스를 이용하기위해 익명으로 로그인
+        FIRService.sharedInstance.login()
+        
         return true
     }
 
@@ -38,6 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
         
         print(#function)
+        if FIRService.sharedInstance.isLogin() == false {
+            FIRService.sharedInstance.login()
+        }
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

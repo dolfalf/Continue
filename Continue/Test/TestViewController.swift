@@ -53,31 +53,38 @@ class TestViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func fetch(sender: UIButton) {
         //
-        fetch()
+        //fetch()
+        
+        FIRService.sharedInstance.fetchAllHabits { (results) in
+            //
+            let items = results
+            print(items)
+        }
     }
     
     //データの送信のメソッド
     func create() {
         
+        let habit = Habit()
         
-        FIRAuth.auth()?.signInAnonymously(completion: { (user, error) in
-            
-            let isAnonymous = user!.isAnonymous  // true
-            let rToken = user!.refreshToken
-            
-            print("isAnonymous:\(isAnonymous), token:\(rToken)")
-            
-            
-            self.childRef.setValue("aaa2")
-            
-            //self.rootRef.child("users").child(user!.uid).setValue(["username": "test user"])
-            
-//            self.rootRef.child("users/(user.uid)/username").setValue("test user 일")
-            
-            
-            
-            
-        })
+        
+        FIRService.sharedInstance.createHabit(habit)
+        
+//        FIRAuth.auth()?.signInAnonymously(completion: { (user, error) in
+//            
+//            let isAnonymous = user!.isAnonymous  // true
+//            let rToken = user!.refreshToken
+//            
+//            print("isAnonymous:\(isAnonymous), token:\(rToken)")
+//            
+//            
+//            self.childRef.setValue("aaa2")
+//            
+//            //self.rootRef.child("users").child(user!.uid).setValue(["username": "test user"])
+//            
+////            self.rootRef.child("users/(user.uid)/username").setValue("test user 일")
+//            
+//        })
         
 //        let itemRef = self.rootRef.child("user-items")
 //        
@@ -91,17 +98,22 @@ class TestViewController: UIViewController, UITextFieldDelegate {
     
     func fetch() {
         
-        if (FIRAuth.auth()?.currentUser) != nil {
-            
-            let refHandle = self.childRef.observe(FIRDataEventType.value, with: { (snapshot) in
-                
-                let postDict = snapshot.value as! String //[String : AnyObject]
-                
-                self.displayLabel.text = postDict
-            })
-            
-            
-        }
+        let complete_habit = Habit()
+        complete_habit.key = "-KWlA8N0usc6qloIHKXV"
+        
+        FIRService.sharedInstance.completeHabit(habit: complete_habit)
+        
+//        if (FIRAuth.auth()?.currentUser) != nil {
+//            
+//            let refHandle = self.childRef.observe(FIRDataEventType.value, with: { (snapshot) in
+//                
+//                let postDict = snapshot.value as! String //[String : AnyObject]
+//                
+//                self.displayLabel.text = postDict
+//            })
+//            
+//            
+//        }
         
         
     }

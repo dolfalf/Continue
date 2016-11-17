@@ -26,6 +26,7 @@
 		BB6D193D1DBF24F1006934C0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D193C1DBF24F1006934C0 /* StartViewController.swift */; };
 		BB6D193F1DBF251D006934C0 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6D193E1DBF251D006934C0 /* SettingViewController.swift */; };
 		BB82017C1DC732A7000B7E2D /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB82017B1DC732A7000B7E2D /* SettingTableViewCell.swift */; };
+		BBA2BE981DDD89E300AB2725 /* FIRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2BE971DDD89E300AB2725 /* FIRService.swift */; };
 		BBE077FB1DD9A59400E96B53 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE077FA1DD9A59400E96B53 /* TestViewController.swift */; };
 		BBE077FD1DD9A59D00E96B53 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE077FC1DD9A59D00E96B53 /* Test.storyboard */; };
 		D73CE62052E1637D0B7424E1 /* Pods_ContinueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3F268691DA3D7D43695E5E /* Pods_ContinueTests.framework */; };
@@ -85,6 +86,8 @@
 		BB82017B1DC732A7000B7E2D /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingTableViewCell.swift; path = Parts/SettingTableViewCell.swift; sourceTree = "<group>"; };
 		BB9B32331DBF4B4E006CBFE4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BB9B32341DBF4B4E006CBFE4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BBA2BE971DDD89E300AB2725 /* FIRService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRService.swift; sourceTree = "<group>"; };
+		BBA2BE991DDD91CB00AB2725 /* Continue.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Continue.entitlements; sourceTree = "<group>"; };
 		BBE077FA1DD9A59400E96B53 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BBE077FC1DD9A59D00E96B53 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,7 +196,9 @@
 		BB6D19011DBF1546006934C0 /* Continue */ = {
 			isa = PBXGroup;
 			children = (
+				BBA2BE991DDD91CB00AB2725 /* Continue.entitlements */,
 				BB6D19021DBF1546006934C0 /* AppDelegate.swift */,
+				BBA2BE971DDD89E300AB2725 /* FIRService.swift */,
 				BB6D19331DBF1B0E006934C0 /* Common */,
 				BB6D19321DBF1AFF006934C0 /* Screen */,
 				BB56D4ED1DD585A400574003 /* Models */,
@@ -332,8 +337,14 @@
 				TargetAttributes = {
 					BB6D18FE1DBF1545006934C0 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Y8RKPBJ3Y3;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					BB6D19141DBF1546006934C0 = {
 						CreatedOnToolsVersion = 8.0;
@@ -537,6 +548,7 @@
 				BB56D4EF1DD5861200574003 /* Habit.swift in Sources */,
 				BB3B67191DDAA70A001761A9 /* TestItem.swift in Sources */,
 				BB6D193D1DBF24F1006934C0 /* StartViewController.swift in Sources */,
+				BBA2BE981DDD89E300AB2725 /* FIRService.swift in Sources */,
 				BB6D19031DBF1546006934C0 /* AppDelegate.swift in Sources */,
 				BB5A2BDC1DD1BFFA00B8B39D /* CreateHabitView.swift in Sources */,
 			);
@@ -681,6 +693,8 @@
 			baseConfigurationReference = 4C789BC39A186422B901D085 /* Pods-Continue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Continue/Continue.entitlements;
+				DEVELOPMENT_TEAM = Y8RKPBJ3Y3;
 				INFOPLIST_FILE = Continue/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -695,6 +709,8 @@
 			baseConfigurationReference = 5DC39A407F7A2B694F2E269D /* Pods-Continue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Continue/Continue.entitlements;
+				DEVELOPMENT_TEAM = Y8RKPBJ3Y3;
 				INFOPLIST_FILE = Continue/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

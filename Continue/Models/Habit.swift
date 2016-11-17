@@ -9,7 +9,7 @@
 import UIKit
 
 class Habit: NSObject {
-    var habitNo: Double
+    var key: String?
     var title: String
     var detail: String
     var startDate: UInt64
@@ -26,7 +26,7 @@ class Habit: NSObject {
     init(title: String, detail: String, startDate: UInt64
         ,token: String,notifyFlag: Bool,weekFlag: Bool) {
         
-        self.habitNo = 0    //increse
+        self.key = nil
         self.title = title
         self.detail = detail
         self.startDate = startDate
@@ -40,6 +40,34 @@ class Habit: NSObject {
         self.deleteFlag = false
         self.timestamp = UInt64(NSDate().timeIntervalSince1970)
         
+    }
+    
+    convenience override init() {
+        self.init(title: "", detail: "", startDate: 0, token: "", notifyFlag:false, weekFlag: false)
+    }
+    
+    func convertToDictionary() -> Dictionary<String, Any> {
+        
+        var dict = Dictionary<String, Any>()
+        
+        if (self.key != nil) {
+            dict["key"] = self.key
+        }
+        
+        dict["title"] = self.title
+        dict["detail"] = self.detail
+        dict["startDate"] = self.startDate
+        dict["lastDoingDate"] = self.lastDoingDate
+        dict["dayCount"] = self.dayCount
+        dict["targetDayCount"] = self.targetDayCount
+        dict["token"] = self.token
+        dict["notifyFlag"] = self.notifyFlag
+        dict["weekFlag"] = self.weekFlag
+        dict["deleteFlag"] = self.deleteFlag
+        dict["completeFlag"] = self.completeFlag
+        dict["timestamp"] = self.timestamp
+
+        return dict
     }
     
 }
